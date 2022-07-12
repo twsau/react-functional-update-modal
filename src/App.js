@@ -3,12 +3,12 @@ import { ContactForm, Settings } from "./views";
 import { useModal } from "./hooks/useModal";
 
 export default function App() {
-  const modal = useModal();
+  const modal = useModal((state) => state.show);
   return (
     <>
       <Modal />
-      <button onClick={() => modal.show(<Settings />)}>settings</button>
-      <button onClick={() => modal.show(<ContactForm />)}>contact form</button>
+      <button onClick={() => modal(<Settings />)}>settings</button>
+      <button onClick={() => modal(<ContactForm />)}>contact form</button>
     </>
   );
 }
