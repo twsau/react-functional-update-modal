@@ -2,7 +2,7 @@ import { Modal } from "./components/Modal";
 import { ContactForm, Settings } from "./views/modals";
 import { useModal } from "./hooks/useModal";
 
-export const App = () => {
+export default function App() {
   const modal = useModal();
   return (
     <>
@@ -11,4 +11,4 @@ export const App = () => {
       <button onClick={() => modal.show(<ContactForm />)}>contact form</button>
     </>
   );
-};
+}
