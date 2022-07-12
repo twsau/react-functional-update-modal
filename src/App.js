@@ -1,20 +1,14 @@
-import { Modal } from "./components/containers";
+import { Modal } from "./components/Modal";
 import { ContactForm, Settings } from "./views/modals";
-import { useModal } from "./hooks";
+import { useModal } from "./hooks/useModal";
 
 export const App = () => {
   const modal = useModal();
   return (
     <>
-      <button onClick={() => modal.show(<Settings />)}>open settings</button>
-      <button onClick={() => modal.show(<ContactForm />)}>
-        open contact form
-      </button>
-      <Modal
-        children={modal.content}
-        isOpen={modal.active}
-        onRequestClose={() => modal.toggleActive(false)}
-      />
+      <Modal />
+      <button onClick={() => modal.show(<Settings />)}>settings</button>
+      <button onClick={() => modal.show(<ContactForm />)}>contact form</button>
     </>
   );
 };
