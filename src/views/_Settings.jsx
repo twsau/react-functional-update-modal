@@ -1,3 +1,1 @@
-export const Settings = () => {
-  return <>settings modal</>;
-};
+export const Settings = () => <>settings modal</>;

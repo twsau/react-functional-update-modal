@@ -1,3 +1,1 @@
-export const ContactForm = () => {
-  return <>contact form modal</>;
-};
+export const ContactForm = () => <>contact form modal</>;
