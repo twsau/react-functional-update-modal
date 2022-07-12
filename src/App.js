@@ -1,5 +1,5 @@
 import { Modal } from "./components/Modal";
-import { ContactForm, Settings } from "./views/modals";
+import { ContactForm, Settings } from "./views";
 import { useModal } from "./hooks/useModal";
 
 export default function App() {
