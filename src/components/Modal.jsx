@@ -5,11 +5,9 @@ ReactModal.setAppElement("#root");
 
 export const Modal = () => {
   const [isOpen, setOpen] = useState(false);
-  const content = useModal((state) => state.content);
-  useEffect(() => {
-    if (!content) return;
-    setOpen(true);
-  }, [content]);
+  const { content } = useModal();
+  useEffect(() => setOpen(content ? true : false), [content]);
+
   return (
     <ReactModal
       children={content}
