@@ -1,9 +1,9 @@
+import { useModal } from "./hooks/useModal";
 import { Modal } from "./components/Modal";
 import { ContactForm, Settings } from "./views";
-import { useModal } from "./hooks/useModal";
 
 export default function App() {
-  const modal = useModal((state) => state.show);
+  const { modal } = useModal();
   return (
     <>
       <Modal />
